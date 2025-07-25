@@ -1,1 +1,344 @@
-"Hello World" 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurante Flashback</title>
+  <!-- Google Fonts: Orbitron for retro/tech headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS Animate On Scroll CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #1a1026;
+      color: #f3f3fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+      /* overflow-x: hidden; (removed to avoid scroll issues) */
+    }
+    body {
+      min-height: 100vh;
+    }
+    h1, h2, h3, .fw-bold {
+      font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif !important;
+      letter-spacing: 1.5px;
+    }
+    .slide-section {
+      min-height: 100vh;
+      /* height: 100vh; removed to allow natural flow */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      position: relative;
+      width: 100vw;
+      padding: 0;
+      scroll-snap-align: start;
+      background: transparent;
+    }
+    .slide-content {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .logo-img {
+      max-width: 320px;
+      width: 40vw;
+      height: auto;
+      display: block;
+      filter: drop-shadow(0 2px 16px #a259e6cc);
+    }
+    .flashback-title {
+      font-size: 3rem;
+      color: #a259e6;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-style: italic;
+      text-shadow: 0 2px 12px #2d1a40;
+    }
+    @media (max-width: 768px) {
+      .slide-content {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+      .logo-img {
+        max-width: 220px;
+        width: 70vw;
+      }
+      .flashback-title {
+        font-size: 2.2rem;
+      }
+    }
+    .section {
+      border-radius: 1rem;
+      background: rgba(34, 20, 56, 0.95);
+      box-shadow: 0 2px 16px rgba(162,89,230,0.12);
+      border: 1px solid #2d1a40;
+      padding: 2.5rem 1.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      color: #f3f3fa;
+    }
+    .main-purple {
+      color: #a259e6;
+    }
+    .btn-purple {
+      background: #a259e6;
+      color: #fff;
+      border: none;
+    }
+    .btn-purple:hover {
+      background: #7c3bbf;
+      color: #fff;
+    }
+    .text-secondary {
+      color: #b8a9d1 !important;
+    }
+    .fs-4, .slide-intro-text {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+    .slide-section img {
+      border-radius: 16px;
+      box-shadow: 0 0 24px 2px #ffe14b88, 0 2px 16px #222;
+      /* yellow LED glow + subtle shadow */
+    }
+    .led-glow-yellow {
+      color: #ffe14b;
+      text-shadow: 0 0 3px #ffe14b, 0 0 6px #ffe14b55;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <section class="slide-section" id="slide-1">
+    <div class="slide-content justify-content-center" data-aos="fade-in" data-aos-duration="1200" style="width:100%;height:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;">
+      <img src="Flashback.png" alt="Logo Restaurante Flashback" class="logo-img">
+    </div>
+  </section>
+  <section class="slide-section" id="slide-2">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">RESTAURANTE TEMÁTICO</h2>
+        <br><br>
+        <p class="fs-4 slide-intro-text" style="color:#fff;">Embarque em uma viagem para o passado, uma experiência gastronômica única e inesquecível, onde cada detalhe é cuidadosamente projetado para transportar você para um mundo de nostalgia e sabor.</p>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <img src="ambiente_restaurante.png" alt="Ambiente do Restaurante" style="max-width:90vw; max-height:60vh; border:2px solid #222; background:#1a1026;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-3">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center text-center mb-4 mb-md-0">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Refeição Brasileira & Self Service</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">Nossa comida é típica brasileira, servida no sistema <b>Self Service</b>.</p>
+        <div class="d-flex flex-row gap-3 w-100 justify-content-center flex-wrap flex-md-nowrap mt-4 mb-3">
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:120px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:180px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Pratos Grandes</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Para suas refeições</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:120px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:180px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Pratos Pequenos</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Para suas sobremesas</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:120px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:180px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Marmitéx e Embalagens</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Para levar nosso sabor para aonde quiser</span>
+          </div>
+        </div>
+        <br>
+        <span class="fw-bold" style="color:#ffe14b; font-size:2rem; font-family:'Orbitron',sans-serif; display:block;">Após se servir, atente-se as balanças</span>
+        <br>
+        <div class="d-flex flex-row gap-3 w-100 justify-content-center flex-wrap flex-md-nowrap mb-3">
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:120px; min-height:90px; box-shadow:0 0 16px #222; flex:1; max-width:180px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Esquerda</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Balança para refeições e marmitéx</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:120px; min-height:90px; box-shadow:0 0 16px #222; flex:1; max-width:180px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Direita</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Balança para suas sobremesas</span>
+          </div>
+        </div>
+        <div class="d-flex flex-row w-100 justify-content-center mt-2">
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:180px; min-height:90px; box-shadow:0 0 16px #222; flex:1; max-width:400px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Fique tranquilo!</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Os pratos já vem com seus pesos descontados, pegue sua comanda e fique avontade para repetir</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <img src="self_service.png" alt="Self Service" style="max-width:90vw; max-height:60vh; border:2px solid #222; background:#1a1026;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-4">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Bebidas & Sucos Naturais</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">As bebidas estão na geladeira, basta pegar e informar na balança.<br><br>Temos sucos naturais de <b>laranja</b> e <b>melancia</b>, ambos sem açúcar.</p>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center gap-3 flex-wrap">
+        <img src="suco_laranja.png" alt="Suco Natural 1" style="max-width:42vw; max-height:50vh; min-width:120px;" />
+        <img src="suco_melancia.png" alt="Suco Natural 2" style="max-width:42vw; max-height:50vh; min-width:120px;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-5">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center justify-content-center text-center mb-4 mb-md-0">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Talheres</h2>
+        <br><br>
+        <div class="d-flex flex-row gap-4 w-100 justify-content-center flex-wrap flex-md-nowrap mt-3">
+          <div class="talher-card d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:160px; min-height:140px; box-shadow:0 0 16px #222; flex:1; max-width:220px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.2rem; font-family:'Orbitron',sans-serif; text-align:center;">À Esquerda</span>
+            <span class="mt-2" style="color:#fff; font-size:1.1rem; text-align:center;">Garfo e faca para refeições</span>
+          </div>
+          <div class="talher-card d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:160px; min-height:140px; box-shadow:0 0 16px #222; flex:1; max-width:220px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.2rem; font-family:'Orbitron',sans-serif; text-align:center;">À Direita</span>
+            <span class="mt-2" style="color:#fff; font-size:1.1rem; text-align:center;">Colheres para a sobremesa</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6"></div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-6">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Sábados Musicais</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">Aos sábados, atrações ao vivo: Violino, Sax, Violão, Canto.<br><br>Cada sábado, um estilo diferente, sempre relembrando músicas antigas!</p>
+        <a href="#" class="btn btn-purple btn-lg mt-3">📅 Ver cardápio semanal</a>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center gap-3 flex-wrap">
+        <img src="sax.png" alt="Saxofone" style="max-width:42vw; max-height:50vh; min-width:120px;" />
+        <img src="violin.png" alt="Violino" style="max-width:42vw; max-height:50vh; min-width:120px;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-7">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Café Especial</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">Logo na entrada, experimente o <span class="led-glow-yellow">melhor café brasileiro!</span></p>
+        <div class="d-flex flex-row gap-3 w-100 justify-content-center flex-wrap flex-md-nowrap mt-4">
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:140px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:200px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Localização Premium</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Grãos selecionados de <span class="led-glow-yellow">Caconde (SP)</span>, torrados na hora para o consumo.</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:140px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:200px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Café do Seu Jeito!</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Escolha entre <span class="led-glow-yellow">Espresso</span> ou <span class="led-glow-yellow">Filtrado na Mesa</span></span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:140px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:200px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Dica de Mestre</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Harmonize seu café com nossas sobremesas, em especial, o <span class="led-glow-yellow">Pudim de Leite</span></span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:140px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:200px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Pontuação Premiada</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;"><span class="led-glow-yellow">+80 Pontos</span> (Categoria: Café Especial)</span>
+          </div>
+          <div class="d-flex flex-column align-items-center justify-content-center p-4" style="background:rgba(34,20,56,0.95); border-radius:18px; min-width:140px; min-height:110px; box-shadow:0 0 16px #222; flex:1; max-width:200px;">
+            <span class="fw-bold" style="color:#ffe14b; font-size:1.1rem; font-family:'Orbitron',sans-serif; text-align:center;">Gostou?</span>
+            <span class="mt-2" style="color:#fff; font-size:1rem; text-align:center;">Compre uma de nossas embalagens de 250 gramas para uma experiência de luxo aonde quiser.</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <img src="https://via.placeholder.com/300x400?text=Image" alt="Placeholder" style="max-width:90vw; max-height:60vh; border:2px solid #222; background:#1a1026;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-8">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Caixa & Pagamento</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">Leve sua comanda ao caixa na entrada para pagar.<br><br>Aceitamos cartões de crédito e dinheiro.<br><br>Se precisar, peça para imprimir a conta para visualizar o valor.</p>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <img src="https://via.placeholder.com/300x400?text=Image" alt="Placeholder" style="max-width:90vw; max-height:60vh; border:2px solid #222; background:#1a1026;" />
+      </div>
+    </div>
+  </section>
+  <section class="slide-section" id="slide-9">
+    <div class="container-fluid d-flex flex-row align-items-center justify-content-center flex-wrap flex-md-nowrap" style="min-height:100vh;">
+      <div class="col-12 col-md-6 d-flex flex-column align-items-center align-items-md-end justify-content-center text-md-end mb-4 mb-md-0 pe-md-3">
+        <h2 class="fw-bold" style="color:#ffe14b; font-size:2.5rem;">Banheiros & Cozinha</h2>
+        <br><br>
+        <p class="fs-4" style="color:#fff;">Banheiros no fundo: <b>esquerda masculino</b>, <b>direita feminino</b>.<br><br>Cozinha exposta para garantir limpeza e transparência.</p>
+      </div>
+      <div class="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <img src="https://via.placeholder.com/300x400?text=Image" alt="Placeholder" style="max-width:90vw; max-height:60vh; border:2px solid #222; background:#1a1026;" />
+      </div>
+    </div>
+  </section>
+  <footer class="text-center py-3">
+    <small class="text-secondary">&copy; 2024 Restaurante Flashback. Todos os direitos reservados.</small>
+  </footer>
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS Animate On Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      offset: 60
+    });
+    // Auto-snap to next section on scroll (for a true slide/swipe effect)
+    let ticking = false;
+    let lastScrollY = window.scrollY;
+    let sections = Array.from(document.querySelectorAll('.slide-section'));
+    let isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    function getCurrentSectionIndex() {
+      let scroll = window.scrollY + window.innerHeight / 2;
+      for (let i = 0; i < sections.length; i++) {
+        let rect = sections[i].getBoundingClientRect();
+        let top = rect.top + window.scrollY;
+        let bottom = top + rect.height;
+        if (scroll >= top && scroll < bottom) return i;
+      }
+      return 0;
+    }
+    function snapToSection(dir) {
+      let idx = getCurrentSectionIndex();
+      let nextIdx = Math.max(0, Math.min(sections.length - 1, idx + dir));
+      if (nextIdx !== idx) {
+        sections[nextIdx].scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    let wheelHandler = function(e) {
+      if (ticking) return;
+      ticking = true;
+      setTimeout(() => { ticking = false; }, 800);
+      if (e.deltaY > 30) {
+        snapToSection(1);
+      } else if (e.deltaY < -30) {
+        snapToSection(-1);
+      }
+    };
+    if (!isTouch) {
+      window.addEventListener('wheel', wheelHandler, { passive: false });
+    }
+    // Removed fallback JS for body height
+  </script>
+</body>
+</html> 
